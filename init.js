@@ -16,6 +16,7 @@ import { getBuildings } from "./building.js"
 import { resetDisplay } from "./display.js"
 import { spec, resetSpec } from "./factory.js"
 import { formatSettings, loadSettings } from "./fragment.js"
+import { getFactorioLabData } from "./factoriolab.js"
 import { getFuel } from "./fuel.js"
 import { getItemGroups } from "./group.js"
 import { getSprites } from "./icon.js"
@@ -89,16 +90,21 @@ function loadData(modName, settings) {
     useLegacyCalculation = mod.legacy
     let filename = "data/" + mod.filename
     d3.json(filename, {cache: "reload"}).then(function(data) {
-        let items = getItems(data)
-        let recipes = getRecipes(data, items)
-        let planets = getPlanets(data, recipes)
-        let modules = getModules(data, items)
-        let buildings = getBuildings(data, items)
-        let belts = getBelts(data)
-        let fuel = getFuel(data, items)
+        if (data.format === "factoriolab-production-v1") {
+            let {items, recipes, planets, modules, buildings, belts, fuels, itemGroups} = getFactorioLabData(data)
+            spec.setData(items, recipes, planets, modules, buildings, belts, fuels, itemGroups)
+        } else {
+            let items = getItems(data)
+            let recipes = getRecipes(data, items)
+            let planets = getPlanets(data, recipes)
+            let modules = getModules(data, items)
+            let buildings = getBuildings(data, items)
+            let belts = getBelts(data)
+            let fuel = getFuel(data, items)
+            let itemGroups = getItemGroups(items, data)
+            spec.setData(items, recipes, planets, modules, buildings, belts, fuel, itemGroups)
+        }
         getSprites(data)
-        let itemGroups = getItemGroups(items, data)
-        spec.setData(items, recipes, planets, modules, buildings, belts, fuel, itemGroups)
 
         fixLegacySettings(settings)
         renderSettings(settings)

@@ -30,7 +30,7 @@ class SurfaceCondition {
     }
 }
 
-class Recipe {
+export class Recipe {
     constructor(key, name, order, col, row, allow_prod, category, time, ingredients, products, conditions) {
         this.key = key
         this.name = name

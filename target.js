@@ -97,7 +97,7 @@ function searchTargets(event) {
             }
             currentHrHasContent = false
         } else {
-            let title = item.name.toLowerCase().replace(/-/g, "")
+            let title = item.name.toLowerCase().replace(/[^a-z0-9]+/g, "")
             if (title.indexOf(search_text) === -1) {
                 this.style.display = "none"
             } else {

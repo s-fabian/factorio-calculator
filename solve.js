@@ -233,7 +233,7 @@ export function solve(spec, fullOutputs) {
         let recipe = recipeArray[i]
         for (let ing of recipe.products) {
             let j = itemColumns.get(ing.item)
-            A.setIndex(i, j, ing.amount)
+            A.setIndex(i, j, recipe.imported ? recipe.gives(ing.item) : ing.amount)
         }
         for (let ing of recipe.getIngredients()) {
             let j = itemColumns.get(ing.item)
@@ -241,7 +241,7 @@ export function solve(spec, fullOutputs) {
         }
         // Apply prod bonus
         let prodEffect = spec.getProdEffect(recipe)
-        if (one.less(prodEffect)) {
+        if (!recipe.imported && one.less(prodEffect)) {
             for (let ing of recipe.products) {
                 let j = itemColumns.get(ing.item)
                 let n = A.index(i, j)

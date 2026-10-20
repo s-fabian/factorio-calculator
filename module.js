@@ -47,6 +47,7 @@ class Module {
         return this.key[0] + this.key[this.key.length - 1]
     }
     canUse(recipe) {
+        if (recipe.canUseModule && !recipe.canUseModule(this)) { return false }
         if (this.hasProdEffect() && !recipe.allow_productivity) {
             return false
         }
@@ -147,6 +148,9 @@ export class ModuleSpec {
     }
     setBuilding(building, spec) {
         this.building = building
+        if (this.recipe.imported) {
+            this.modules = this.modules.map(m => m && !m.canUse(this.recipe) ? null : m)
+        }
         if (this.modules.length > building.moduleSlots) {
             this.modules.length = building.moduleSlots
         }
@@ -163,16 +167,36 @@ export class ModuleSpec {
         if (index >= this.modules.length) {
             return false
         }
+        if (module && this.recipe.imported && !module.canUse(this.recipe)) { return false }
         let oldModule = this.modules[index]
         let needRecalc = (oldModule && oldModule.hasProdEffect()) || (module && module.hasProdEffect())
         this.modules[index] = module
-        return needRecalc
+        return needRecalc || (this.recipe.imported && oldModule !== module)
     }
     setBeaconModule(module, i) {
+        if (module && this.recipe.imported && !this.recipe.canUseModule(module, true)) { return }
         this.beaconModules[i] = module
     }
     setBeaconCount(count) {
-        this.beaconCount = count
+        this.beaconCount = count.less(zero) ? zero : count
+    }
+    importedBeaconEffect(field) {
+        if (!this.modules.length || !zero.less(this.beaconCount)) { return zero }
+        let precision = Rational.from_float(10000)
+        let round = (value, truncate) => {
+            let magnitude = value.abs().mul(precision)
+            if (!truncate) { magnitude = magnitude.add(half) }
+            let result = magnitude.floor().div(precision)
+            return value.less(zero) ? zero.sub(result) : result
+        }
+        let effect = zero
+        for (let module of this.beaconModules) {
+            if (!module || !this.recipe.canUseModule(module, true)) { continue }
+            effect = effect.add(round(module[field].mul(beaconEffect), true))
+        }
+        let index = Math.max(0, this.beaconCount.add(half).floor().toFloat() - 1)
+        let profile = beaconProfile ? beaconProfile[Math.min(index, beaconProfile.length - 1)] : one
+        return round(effect.mul(this.beaconCount).mul(profile), false)
     }
     speedEffect() {
         let speed = one
@@ -182,13 +206,13 @@ export class ModuleSpec {
             }
             speed = speed.add(module.speed)
         }
-        if (this.modules.length > 0) {
+        if (!this.recipe.imported && this.modules.length > 0 && zero.less(this.beaconCount)) {
             for (let module of this.beaconModules) {
-                if (module === null) {
+                if (module === null || (this.recipe.imported && !this.recipe.canUseModule(module, true))) {
                     continue
                 }
                 let beacon = module.speed.mul(this.beaconCount).mul(beaconEffect)
-                if (!useLegacyCalculation) {
+                if (!useLegacyCalculation && beaconProfile) {
                     let i = this.beaconCount.ceil().toFloat() - 1
                     if (i >= beaconProfile.length) {
                         i = beaconProfile.length - 1
@@ -197,6 +221,11 @@ export class ModuleSpec {
                 }
                 speed = speed.add(beacon)
             }
+        }
+        if (this.recipe.imported) {
+            speed = speed.add(this.importedBeaconEffect("speed")).add(Rational.from_float_approximate(this.building.baseEffects.speed || 0))
+            let minimum = Rational.from_floats(1, 5)
+            if (speed.less(minimum)) { speed = minimum }
         }
         return speed
     }
@@ -208,7 +237,11 @@ export class ModuleSpec {
             }
             prod = prod.add(module.productivity)
         }
-        prod = prod.add(this.building.prodEffect(spec))
+        prod = prod.add(this.building.prodEffect(spec, this.recipe))
+        if (this.recipe.imported && !this.recipe.flags.has("mining")) {
+            let max = Rational.from_float(4)
+            if (max.less(prod)) { prod = max }
+        }
         return prod
     }
     powerEffect(spec) {
@@ -219,13 +252,13 @@ export class ModuleSpec {
             }
             power = power.add(module.power)
         }
-        if (this.modules.length > 0) {
+        if (!this.recipe.imported && this.modules.length > 0 && zero.less(this.beaconCount)) {
             for (let module of this.beaconModules) {
-                if (module === null) {
+                if (module === null || (this.recipe.imported && !this.recipe.canUseModule(module, true))) {
                     continue
                 }
                 let beacon = module.power.mul(this.beaconCount).mul(beaconEffect)
-                if (!useLegacyCalculation) {
+                if (!useLegacyCalculation && beaconProfile) {
                     let i = this.beaconCount.ceil().toFloat() - 1
                     if (i >= beaconProfile.length) {
                         i = beaconProfile.length - 1
@@ -234,6 +267,9 @@ export class ModuleSpec {
                 }
                 power = power.add(beacon)
             }
+        }
+        if (this.recipe.imported) {
+            power = power.add(this.importedBeaconEffect("power")).add(Rational.from_float_approximate(this.building.baseEffects.consumption || 0))
         }
         let minimum = Rational.from_floats(1, 5)
         if (power.less(minimum)) {
@@ -290,7 +326,7 @@ export function getModules(data, items) {
         shortModules.set(shortName, module)
     }
     beaconEffect = Rational.from_float_approximate(data.beacon.distribution_effectivity)
-    if (useLegacyCalculation) {
+    if (useLegacyCalculation || !data.beacon.profile) {
         beaconProfile = null
     } else {
         beaconProfile = []

@@ -17,7 +17,7 @@ import { Rational, zero, one } from "./rational.js"
 
 let thirty = Rational.from_float(30)
 
-class Building {
+export class Building {
     constructor(key, name, col, row, categories, speed, prodBonus, moduleSlots, power, fuel) {
         this.key = key
         this.name = name

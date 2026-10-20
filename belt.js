@@ -14,7 +14,7 @@ limitations under the License.*/
 import { Icon } from "./icon.js"
 import { Rational } from "./rational.js"
 
-class Belt {
+export class Belt {
     constructor(key, name, col, row, rate) {
         this.key = key
         this.name = name

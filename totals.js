@@ -58,7 +58,10 @@ export class Totals {
         for (let [recipe, rate] of rates) {
             for (let ing of recipe.getIngredients()) {
                 let itemRate = rate.mul(ing.amount)
-                set(this.consumers, ing.item, recipe, itemRate)
+                // Imported recipes can consume nutrients both as a recipe
+                // ingredient and as biochamber fuel. Keep their full demand.
+                let previous = recipe.imported ? this.consumers.get(ing.item)?.get(recipe) || zero : zero
+                set(this.consumers, ing.item, recipe, previous.add(itemRate))
                 add(this.items, ing.item, itemRate)
             }
             for (let ing of recipe.products) {

@@ -219,7 +219,7 @@ class BeaconInput {
         for (let index of toUpdate) {
             this.cell.row.moduleSpec.setBeaconModule(this.module, index)
         }
-        if (spec.isFactoryTarget(this.cell.row.moduleSpec.recipe)) {
+        if (this.cell.row.moduleSpec.recipe.imported || spec.isFactoryTarget(this.cell.row.moduleSpec.recipe)) {
             spec.updateSolution()
         } else {
             spec.display()
@@ -557,7 +557,7 @@ export function displayItems(spec, totals) {
                 .on("change", function (event, d) {
                     let count = Rational.from_string(event.target.value)
                     d.moduleSpec.setBeaconCount(count)
-                    if (spec.isFactoryTarget(d.recipe)) {
+                    if (d.recipe.imported || spec.isFactoryTarget(d.recipe)) {
                         spec.updateSolution()
                     } else {
                         spec.display()
@@ -667,14 +667,14 @@ export function displayItems(spec, totals) {
     let fuelRow = buildingRow.filter(d => d.building.fuel !== null)
     let fuelIcon = fuelRow.selectAll(".fuel-icon")
     fuelIcon.selectAll("*").remove()
-    fuelIcon.append(d => spec.fuel.icon.make(32))
+    fuelIcon.append(d => (spec.getFuel(d.recipe) || spec.fuel).icon.make(32))
     fuelIcon.append("span")
         .text(" \u00d7 ")
     fuelRow.selectAll("tt.power")
         .text(d => {
             let rate = totals.rates.get(d.recipe)
             let {fuel, power} = spec.getPowerUsage(d.recipe, rate)
-            return `${spec.format.alignRate(power.div(spec.fuel.value))}/${spec.format.rateName}`
+            return `${spec.format.alignRate(power.div((spec.getFuel(d.recipe) || spec.fuel).value))}/${spec.format.rateName}`
         })
     let electricRow = buildingRow.filter(d => d.building.fuel === null)
     let totalPower = zero
@@ -683,8 +683,8 @@ export function displayItems(spec, totals) {
         .text(d => {
             let rate = totals.rates.get(d.recipe)
             let {fuel, power} = spec.getPowerUsage(d.recipe, rate)
-            totalPower = totalPower.add(power)
-            return alignPower(power)
+            if (fuel === "electric") { totalPower = totalPower.add(power) }
+            return alignPower(power) + (fuel === "heat" ? " heat" : "")
         })
     itemRow.selectAll("td.popout a")
         .attr("href", d => {

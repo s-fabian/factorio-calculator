@@ -12,11 +12,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.*/
 
-function getFuelConsumers(spec, recipes) {
+function getFuelConsumers(spec, recipes, item) {
     let consumers = []
     for (let recipe of recipes) {
         let building = spec.getBuilding(recipe)
-        if (building !== null && building.fuel === "chemical") {
+        if (building !== null && spec.getFuel(recipe)?.item === item) {
             consumers.push(recipe)
         }
     }
@@ -35,11 +35,9 @@ function neighboringRecipes(spec, recipes, recipe, invert) {
         let recipeSet
         if (invert) {
             recipeSet = ing.item.uses
-            if (ing.item === spec.fuel.item) {
-                recipeSet = recipeSet.concat(getFuelConsumers(spec, recipes))
-            }
+            recipeSet = recipeSet.concat(getFuelConsumers(spec, recipes, ing.item))
         } else {
-            recipeSet = ing.item.recipes
+            recipeSet = spec.getRecipes(ing.item)
         }
         for (let recipe of recipeSet) {
             if (!recipes.has(recipe)) {

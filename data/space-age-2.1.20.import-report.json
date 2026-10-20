@@ -1,0 +1,3063 @@
+{
+  "format": "factoriolab-production-v1",
+  "source": {
+    "dataset": "2x1",
+    "versions": {
+      "base": "2.1.20",
+      "elevated-rails": "2.1.20",
+      "quality": "2.1.20",
+      "recycler": "2.1.20",
+      "space-age": "2.1.20"
+    },
+    "files": {
+      "public/data/2x1/data.json": "e21073992dd45e219e9276f3a1403d0862daacd69e3a0d3f37af87436c6ff3b4",
+      "public/data/2x1/icons.webp": "19cbbc78f272b1c70cbc4389f1875f81bdf63b61bfededc3420b506ae8f7643e",
+      "LICENSE": "1b17e7ef58a7fe1f0278c5423fa5da9fb2a1829a23f180c1315e359eceec146d"
+    }
+  },
+  "counts": {
+    "sourceItems": 581,
+    "items": 304,
+    "sourceRecipes": 906,
+    "recipes": 645,
+    "externalResources": 4,
+    "locations": 6
+  },
+  "attribution": {
+    "project": "FactorioLab",
+    "url": "https://github.com/factoriolab/factoriolab",
+    "license": "MIT",
+    "licenseFile": "docs/FACTORIOLAB-LICENSE.txt",
+    "gameAssets": "Factorio names and artwork belong to Wube Software. FactorioLab's MIT license does not relicense game assets."
+  },
+  "utilitySpriteSources": {
+    "dataset": "data/space-age-2.0.55.json",
+    "datasetSha256": "fd19b0b06fecdab5e03f093f2957f3399a2fe0f12a598defe6b2c6da54d46109",
+    "sprite": "images/sprite-sheet-1d2b6676016208d82ff2a56043bb3e4d.png",
+    "spriteSha256": "c3f7f40e4251df0026bcb0faf2b404b52d0525631f3a022f12395569ae727a05"
+  },
+  "exclusions": [
+    {
+      "kind": "item",
+      "id": "steam-power",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electronics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "automation-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "steel-axe",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "space-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "oil-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "uranium-processing-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "recycling",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "space-platform",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "calcite-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "tungsten-carbide-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "big-mining-drill-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "foundry-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "tungsten-steel",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "metallurgic-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "agriculture",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "yumako-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "biochamber-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "jellynut-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "bioflux-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "artificial-soil",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "bacteria-cultivation",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "bioflux-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "agricultural-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "biter-egg-handling",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "holmium-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electromagnetic-plant-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electromagnetic-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "heating-tower-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "lithium-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "cryogenic-plant-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "cryogenic-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-mining-drill-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "repair-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "radar-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "physical-projectile-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "weapon-shooting-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "automation",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "logistic-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "steel-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "military",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "fast-inserter-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "logistics-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "lamp",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "heavy-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "gun-turret-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stone-wall-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "physical-projectile-damage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "weapon-shooting-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stronger-explosives-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "bulk-inserter-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "inserter-capacity-bonus-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "inserter-capacity-bonus-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "automation-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "military-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "railway",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "automated-rail-transportation",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "automobilism",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "solar-energy",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "research-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "research-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-energy-distribution-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "advanced-material-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "concrete-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "engine",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "landfill-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "logistics-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "toolbelt",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "gate-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "chemical-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "military-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "explosives-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "flammables",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "advanced-circuit-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "fluid-wagon-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "modular-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-energy-accumulators",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "battery-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "night-vision-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "belt-immunity-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "battery-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "solar-panel-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "fluid-handling",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "oil-gathering",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "sulfur-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "plastics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "modules",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "speed-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "productivity-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "efficiency-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "mining-productivity-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "circuit-network",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "quality-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "physical-projectile-damage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "physical-projectile-damage-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stronger-explosives-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "refined-flammables-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "refined-flammables-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "weapon-shooting-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "weapon-shooting-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "follower-robot-count-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "follower-robot-count-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "land-mine-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "flamethrower-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "rocketry",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "energy-shield-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "defender",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "inserter-capacity-bonus-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "production-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "utility-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "processing-unit-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "braking-force-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "braking-force-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "power-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "robotics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "rocket-fuel-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "low-density-structure-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "rocket-silo-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "research-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "research-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-energy-distribution-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "advanced-material-processing-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "lubricant-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-engine",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "construction-robotics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "logistic-robotics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-storage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "exoskeleton-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "personal-roboport-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "advanced-oil-processing-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "uranium-mining",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "nuclear-power",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "mining-productivity-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "advanced-combinators",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "physical-projectile-damage-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "weapon-shooting-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-shooting-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-shooting-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "follower-robot-count-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "military-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "tank-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "explosive-rocketry",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "personal-laser-defense-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "discharge-defense-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "distractor",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stronger-explosives-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "refined-flammables-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-weapons-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-weapons-damage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-weapons-damage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-weapons-damage-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-shooting-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-shooting-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-turret-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "inserter-capacity-bonus-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "inserter-capacity-bonus-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "inserter-capacity-bonus-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "automation-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "braking-force-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "braking-force-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "braking-force-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "logistics-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "research-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "effect-transmission",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-storage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "nuclear-fuel-reprocessing-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "mining-productivity-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "elevated-rail",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "steel-plate-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "battery-mk2-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "logistic-system",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "speed-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "productivity-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "efficiency-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "kovarex-enrichment-process-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "quality-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "landing-pad-unloading-bay-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "space-platform-thruster",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "planet-discovery-vulcanus",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "planet-discovery-gleba",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "planet-discovery-fulgora",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "physical-projectile-damage-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stronger-explosives-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "refined-flammables-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "refined-flammables-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-weapons-damage-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-weapons-damage-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "weapon-shooting-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-shooting-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-shooting-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-shooting-speed-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "follower-robot-count-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "inserter-capacity-bonus-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "military-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "uranium-ammo",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "braking-force-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "braking-force-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "power-armor-mk2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "research-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-storage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "fission-reactor-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "destroyer",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-weapons-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "cliff-explosives-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "coal-liquefaction-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "speed-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "asteroid-reprocessing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "low-density-structure-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "productivity-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "efficiency-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "toolbelt-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "tree-seeding",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "carbon-fiber-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "fish-breeding-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "plastic-bar-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "rocket-fuel-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "quality-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "lightning-collector-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "processing-unit-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "scrap-recycling-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "rocket-part-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "physical-projectile-damage-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stronger-explosives-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stronger-explosives-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "refined-flammables-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "laser-weapons-damage-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "atomic-bomb-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-weapons-damage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "turbo-transport-belt-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "epic-quality",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "rocket-turret-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "captivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "health",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "personal-roboport-mk2-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "battery-mk3-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "follower-robot-count-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "artillery-shell-range-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "artillery-shell-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "artillery",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "artillery-shell-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stronger-explosives-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "refined-flammables-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stack-inserter-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "transport-belt-capacity-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "transport-belt-capacity-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "overgrowth-soil",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "advanced-asteroid-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "asteroid-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "energy-shield-mk2-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-weapons-damage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "electric-weapons-damage-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "worker-robots-speed-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "mech-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "tesla-weapons",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "railgun-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "biolab-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "spidertron-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "rail-support-foundations",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "railgun-shooting-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "planet-discovery-aquilo",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "legendary-quality",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "railgun-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "quantum-processor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "fusion-reactor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "fusion-reactor-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "stellar-discovery-solar-system-edge",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "promethium-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "foundation-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "captive-biter-spawner-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "item",
+      "id": "research-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "nauvis-vulcanus",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "nauvis-gleba",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "nauvis-fulgora",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "vulcanus-gleba",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "gleba-fulgora",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "gleba-aquilo",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "fulgora-aquilo",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "aquilo-solar-system-edge",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "solar-system-edge-shattered-planet",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "solar-system-edge",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "shattered-planet",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "nauvis",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "vulcanus",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "gleba",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "fulgora",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "aquilo",
+      "reason": "Space-route/orbital asteroid distribution; chunks are external resources."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-mining-drill-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "repair-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "radar-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "physical-projectile-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "weapon-shooting-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "automation",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "logistic-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "steel-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "military",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "fast-inserter-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "logistics-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "lamp",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "heavy-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "gun-turret-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stone-wall-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "physical-projectile-damage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "weapon-shooting-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stronger-explosives-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "bulk-inserter-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "inserter-capacity-bonus-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "inserter-capacity-bonus-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "automation-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "military-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "railway",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "automated-rail-transportation",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "automobilism",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "solar-energy",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "research-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "research-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-energy-distribution-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "advanced-material-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "concrete-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "engine",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "landfill-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "logistics-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "toolbelt",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "gate-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "chemical-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "military-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "explosives-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "flammables",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "advanced-circuit-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "fluid-wagon-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "modular-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-energy-accumulators",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "battery-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "night-vision-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "belt-immunity-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "battery-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "solar-panel-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "fluid-handling",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "oil-gathering",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "sulfur-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "plastics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "modules",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "speed-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "productivity-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "efficiency-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "mining-productivity-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "circuit-network",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "quality-module-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "physical-projectile-damage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "physical-projectile-damage-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stronger-explosives-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "refined-flammables-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "refined-flammables-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "weapon-shooting-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "weapon-shooting-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "follower-robot-count-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "follower-robot-count-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "land-mine-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "flamethrower-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "rocketry",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "energy-shield-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "defender",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "inserter-capacity-bonus-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "production-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "utility-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "processing-unit-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "braking-force-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "braking-force-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "power-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "robotics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "rocket-fuel-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "low-density-structure-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "rocket-silo-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "research-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "research-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-energy-distribution-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "advanced-material-processing-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "lubricant-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-engine",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "construction-robotics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "logistic-robotics",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-storage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "exoskeleton-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "personal-roboport-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "advanced-oil-processing-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "uranium-mining",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "nuclear-power",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "mining-productivity-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "advanced-combinators",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "physical-projectile-damage-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "weapon-shooting-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-shooting-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-shooting-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "follower-robot-count-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "military-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "tank-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "explosive-rocketry",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "personal-laser-defense-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "discharge-defense-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "distractor",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stronger-explosives-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "refined-flammables-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-weapons-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-weapons-damage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-weapons-damage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-weapons-damage-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-shooting-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-shooting-speed-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-turret-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "inserter-capacity-bonus-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "inserter-capacity-bonus-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "inserter-capacity-bonus-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "automation-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "braking-force-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "braking-force-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "braking-force-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "logistics-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "research-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "effect-transmission",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-storage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "nuclear-fuel-reprocessing-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "mining-productivity-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "elevated-rail",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "steel-plate-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-speed-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-speed-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "battery-mk2-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "logistic-system",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "speed-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "productivity-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "efficiency-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "kovarex-enrichment-process-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "quality-module-2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "landing-pad-unloading-bay-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "space-platform-thruster",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "planet-discovery-vulcanus",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "planet-discovery-gleba",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "planet-discovery-fulgora",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "physical-projectile-damage-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stronger-explosives-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "refined-flammables-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "refined-flammables-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-weapons-damage-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-weapons-damage-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "weapon-shooting-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-shooting-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-shooting-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-shooting-speed-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "follower-robot-count-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "inserter-capacity-bonus-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "military-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "uranium-ammo",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "braking-force-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "braking-force-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "power-armor-mk2-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "research-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-speed-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-storage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "fission-reactor-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "destroyer",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-weapons-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "cliff-explosives-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "coal-liquefaction-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "speed-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "asteroid-reprocessing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "low-density-structure-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "productivity-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "efficiency-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "toolbelt-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "tree-seeding",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "carbon-fiber-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "fish-breeding-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "plastic-bar-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "rocket-fuel-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "quality-module-3-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "lightning-collector-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "processing-unit-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "scrap-recycling-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "rocket-part-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "physical-projectile-damage-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stronger-explosives-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stronger-explosives-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "refined-flammables-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "laser-weapons-damage-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "atomic-bomb-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-weapons-damage-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-speed-6",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "turbo-transport-belt-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "epic-quality",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "rocket-turret-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "captivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "health",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "personal-roboport-mk2-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "battery-mk3-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "follower-robot-count-5",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "artillery-shell-range-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "artillery-shell-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "artillery",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "artillery-shell-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stronger-explosives-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "refined-flammables-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stack-inserter-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "transport-belt-capacity-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "transport-belt-capacity-2",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "overgrowth-soil",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "advanced-asteroid-processing",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "asteroid-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "energy-shield-mk2-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-weapons-damage-3",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "electric-weapons-damage-4",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "worker-robots-speed-7",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "mech-armor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "tesla-weapons",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "railgun-damage-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "biolab-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "spidertron-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "rail-support-foundations",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "railgun-shooting-speed-1",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "planet-discovery-aquilo",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "legendary-quality",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "railgun-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "quantum-processor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "fusion-reactor-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "fusion-reactor-equipment-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "stellar-discovery-solar-system-edge",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "promethium-science-pack-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "foundation-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "captive-biter-spawner-technology",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "recipe",
+      "id": "research-productivity",
+      "reason": "Research/technology target."
+    },
+    {
+      "kind": "module",
+      "id": "quality-module",
+      "reason": "Quality modules remain craftable, but cannot be installed in normal-quality calculations."
+    },
+    {
+      "kind": "module",
+      "id": "quality-module-2",
+      "reason": "Quality modules remain craftable, but cannot be installed in normal-quality calculations."
+    },
+    {
+      "kind": "module",
+      "id": "quality-module-3",
+      "reason": "Quality modules remain craftable, but cannot be installed in normal-quality calculations."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.burner-inserter.inserter.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.inserter.inserter.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.long-handed-inserter.inserter.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.fast-inserter.inserter.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.bulk-inserter.inserter.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.stack-inserter.inserter.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.pump.belt.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.boiler.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.nuclear-reactor.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.heat-exchanger.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.offshore-pump.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.stone-furnace.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.steel-furnace.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.electric-furnace.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.foundry.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.recycler.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.biochamber.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.captive-biter-spawner.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.assembling-machine-1.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.assembling-machine-2.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.assembling-machine-3.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.oil-refinery.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.chemical-plant.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.centrifuge.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.electromagnetic-plant.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.cryogenic-plant.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.lab.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.biolab.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.heating-tower.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.beacon.beacon.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.speed-module.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.speed-module-2.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.speed-module-3.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.efficiency-module.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.efficiency-module-2.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.efficiency-module-3.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.productivity-module.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.productivity-module-2.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.productivity-module-3.module.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.rocket-silo.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "qualityRecord",
+      "id": "items.crusher.machine.qualityRecord",
+      "reason": "Only normal quality is imported."
+    },
+    {
+      "kind": "effect",
+      "id": "speed-module.module.quality",
+      "reason": "Quality effects are deferred; other module effects are retained."
+    },
+    {
+      "kind": "effect",
+      "id": "speed-module-2.module.quality",
+      "reason": "Quality effects are deferred; other module effects are retained."
+    },
+    {
+      "kind": "effect",
+      "id": "speed-module-3.module.quality",
+      "reason": "Quality effects are deferred; other module effects are retained."
+    },
+    {
+      "kind": "metadata",
+      "id": "qualities",
+      "reason": "Normal quality only; no quality-tier expansion."
+    },
+    {
+      "kind": "metadata",
+      "id": "flags",
+      "reason": "FactorioLab user-interface capability flags are not calculator data."
+    },
+    {
+      "kind": "metadata",
+      "id": "defaults",
+      "reason": "Calculator retains its existing preferences and zero installed modules."
+    }
+  ],
+  "iconFallbacks": [
+    {
+      "kind": "recipe",
+      "id": "yumako-spoil",
+      "requested": "yumako-spoil",
+      "resolved": "spoilage"
+    },
+    {
+      "kind": "recipe",
+      "id": "jellynut-spoil",
+      "requested": "jellynut-spoil",
+      "resolved": "spoilage"
+    },
+    {
+      "kind": "recipe",
+      "id": "nutrients-spoil",
+      "requested": "nutrients-spoil",
+      "resolved": "spoilage"
+    },
+    {
+      "kind": "recipe",
+      "id": "bioflux-spoil",
+      "requested": "bioflux-spoil",
+      "resolved": "spoilage"
+    },
+    {
+      "kind": "recipe",
+      "id": "yumako-mash-spoil",
+      "requested": "yumako-mash-spoil",
+      "resolved": "spoilage"
+    },
+    {
+      "kind": "recipe",
+      "id": "jelly-spoil",
+      "requested": "jelly-spoil",
+      "resolved": "spoilage"
+    },
+    {
+      "kind": "recipe",
+      "id": "agricultural-science-pack-spoil",
+      "requested": "agricultural-science-pack-spoil",
+      "resolved": "spoilage"
+    },
+    {
+      "kind": "recipe",
+      "id": "heat-exchanger-steam-boil",
+      "requested": "heat-exchanger-steam-boil",
+      "resolved": "steam"
+    },
+    {
+      "kind": "recipe",
+      "id": "iron-ore-mining",
+      "requested": "iron-ore-mining",
+      "resolved": "iron-ore"
+    },
+    {
+      "kind": "recipe",
+      "id": "copper-ore-mining",
+      "requested": "copper-ore-mining",
+      "resolved": "copper-ore"
+    },
+    {
+      "kind": "recipe",
+      "id": "sulfuric-acid-geyser-mining",
+      "requested": "sulfuric-acid-geyser-mining",
+      "resolved": "sulfuric-acid"
+    }
+  ],
+  "deferred": [
+    "Research targets",
+    "Non-normal quality tiers",
+    "Space-route/orbital asteroid simulations",
+    "Freshness and transport-time simulation"
+  ],
+  "notes": [
+    "Source output amounts already represent expected probabilistic yields.",
+    "Distinct temperature-specific item identifiers and iconText labels are retained.",
+    "Source locked flags describe technology unlocks, not production restrictions.",
+    "Spoilage recipes remain material conversions; their source time is not a freshness model.",
+    "Burn recipes intentionally retain zero placeholder amounts; the adapter derives fuel consumption and depleted-cell output from machine power and fuel energy.",
+    "Nested source qualityRecord variants are discarded; retained values are normal quality."
+  ]
+}

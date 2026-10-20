@@ -84,9 +84,15 @@ class BuildingGroup {
         }
         return this.buildings[this.buildings.length - 1]
     }
-    getBuilding(recipe) {
+    getBuilding(recipe, spec) {
+        let eligible = this.buildings.filter(b => b.categories.has(recipe.category) &&
+            (!recipe.imported || spec.isBuildingAvailable(recipe, b)))
+        if (recipe.imported && this.building === this.getDefault()) {
+            let preferred = eligible.find(b => DEFAULT_BUILDINGS.has(b.key))
+            if (preferred) { return preferred }
+        }
         let b = null
-        for (let building of this.buildings) {
+        for (let building of eligible) {
             if (building.categories.has(recipe.category)) {
                 b = building
                 if (building === this.building || this.building.less(building)) {
@@ -171,6 +177,7 @@ class FactorySpecification {
     setData(items, recipes, planets, modules, buildings, belts, fuels, itemGroups) {
         this.items = items
         this.recipes = recipes
+        this.imported = Array.from(recipes.values()).some(r => r.imported)
         this.planets = planets
         this.modules = modules
         this.buildings = getBuildingGroups(buildings)
@@ -259,7 +266,7 @@ class FactorySpecification {
         }
         this.disable.delete(recipe)
         for (let item of candidates) {
-            if (!this.isItemDisabled(item)) {
+            if (!this.isItemDisabled(item) && this.priority.getResource(item.disableRecipe)) {
                 this.priority.removeRecipe(item.disableRecipe)
             }
         }
@@ -272,10 +279,10 @@ class FactorySpecification {
     }
     _syncPlanetDisable() {
         let allDisable
-        if (this.selectedPlanets.size === 0) {
+        if (this.selectedPlanets.size === 0 && !this.imported) {
             allDisable = new Set()
         } else {
-            let planets = Array.from(this.selectedPlanets)
+            let planets = Array.from(this.selectedPlanets.size ? this.selectedPlanets : this.planets.values())
             allDisable = new Set(planets[0].disable)
             for (let i = 1; i < planets.length; i++) {
                 let p = planets[i]
@@ -301,6 +308,18 @@ class FactorySpecification {
         for (let r of allDisable) {
             if (!this.disable.has(r)) {
                 this.setDisable(r)
+            }
+        }
+        // Availability changes as soon as selectedPlanets changes. Reconcile
+        // external fallback costs after that change, even when the recipe was
+        // already unavailable when setDisable inspected its products.
+        if (this.priority && this.imported) {
+            for (let item of this.items.values()) {
+                if (this.isItemDisabled(item)) {
+                    this._addItemToMaxPriority(item)
+                } else if (!this.ignore.has(item) && this.priority.getResource(item.disableRecipe)) {
+                    this.priority.removeRecipe(item.disableRecipe)
+                }
             }
         }
     }
@@ -406,7 +425,7 @@ class FactorySpecification {
     getUses(item) {
         let recipes = []
         for (let recipe of item.uses) {
-            if (!this.disable.has(recipe)) {
+            if (!this.disable.has(recipe) && this.isRecipeAvailable(recipe)) {
                 recipes.push(recipe)
             }
         }
@@ -422,7 +441,7 @@ class FactorySpecification {
     // still possible.
     isItemDisabled(item) {
         for (let recipe of item.recipes) {
-            if (!this.disable.has(recipe)) {
+            if (!this.disable.has(recipe) && this.isRecipeAvailable(recipe)) {
                 if (recipe.isNetProducer(item)) {
                     return false
                 }
@@ -433,7 +452,7 @@ class FactorySpecification {
     getRecipes(item) {
         let recipes = []
         for (let recipe of item.recipes) {
-            if (!this.disable.has(recipe)) {
+            if (!this.disable.has(recipe) && this.isRecipeAvailable(recipe)) {
                 recipes.push(recipe)
             }
         }
@@ -485,11 +504,31 @@ class FactorySpecification {
         }
         return false
     }
+    isBuildingAvailable(recipe, building) {
+        if (!recipe.imported) { return true }
+        if (!recipe.producers.has(building.key)) { return false }
+        let planets = this.selectedPlanets.size ? this.selectedPlanets : this.planets.values()
+        for (let planet of planets) {
+            if ((!recipe.locations || recipe.locations.has(planet.key)) &&
+                (!building.locations || building.locations.has(planet.key))) { return true }
+        }
+        return false
+    }
+    isRecipeAvailable(recipe) {
+        if (!recipe.imported) { return true }
+        if (recipe.producers.size) { return this.getBuilding(recipe) !== null }
+        if (!recipe.locations) { return true }
+        let planets = this.selectedPlanets.size ? this.selectedPlanets : this.planets.values()
+        for (let planet of planets) {
+            if (recipe.locations.has(planet.key)) { return true }
+        }
+        return false
+    }
     getBuilding(recipe) {
         if (recipe.category === null || recipe.category === undefined) {
             return null
         } else {
-            return this.buildings.get(recipe.category).getBuilding(recipe)
+            return this.buildings.get(recipe.category)?.getBuilding(recipe, this) || null
         }
     }
     getBuildingGroup(building) {
@@ -503,12 +542,12 @@ class FactorySpecification {
             let g = this.buildings.get(recipe.category)
             if (group === g) {
                 let b = this.getBuilding(recipe)
-                moduleSpec.setBuilding(b, this)
+                if (b) { moduleSpec.setBuilding(b, this) } else { this.spec.delete(recipe) }
             }
         }
     }
     initModuleSpec(recipe, building) {
-        if (!this.spec.has(recipe) && building !== null && building.canBeacon()) {
+        if (!this.spec.has(recipe) && building !== null && (building.canBeacon() || building.imported)) {
             let m = new ModuleSpec(recipe, this)
             m.setBuilding(building, this)
             this.spec.set(recipe, m)
@@ -523,6 +562,11 @@ class FactorySpecification {
     }
     getModuleSpec(recipe) {
         let m = this.spec.get(recipe)
+        if (recipe.imported && m) {
+            let building = this.getBuilding(recipe)
+            if (!building) { this.spec.delete(recipe); return undefined }
+            if (m.building !== building) { m.setBuilding(building, this) }
+        }
         if (m === undefined) {
             let building = this.getBuilding(recipe)
             return this.initModuleSpec(recipe, building)
@@ -615,13 +659,18 @@ class FactorySpecification {
     getBeltCount(rate) {
         return rate.div(this.belt.rate)
     }
+    getFuel(recipe) {
+        let building = this.getBuilding(recipe)
+        if (!building || building.fuel === null) { return null }
+        return building.fixedFuel || (building.fuel === "chemical" ? this.fuel : null)
+    }
     getPowerUsage(recipe, rate) {
         let building = this.getBuilding(recipe)
         if (building === null) {
             return {fuel: null, power: zero}
         }
         let count = this.getCount(recipe, rate)
-        if (building.fuel !== null) {
+        if (building.fuel !== null && !building.imported) {
             return {fuel: building.fuel, power: building.power.mul(count)}
         }
         let modules = this.getModuleSpec(recipe)
@@ -631,8 +680,11 @@ class FactorySpecification {
         } else {
             powerEffect = one
         }
-        let power = building.power.mul(count).mul(powerEffect).add(building.drain().mul(count.ceil()))
-        return {"fuel": "electric", "power": power}
+        let usage = recipe.imported && recipe.usage !== null ? recipe.usage : building.power
+        let power = usage.mul(count).mul(powerEffect)
+        if (building.fuel === null) { power = power.add(building.drain().mul(count.ceil())) }
+        let fuel = building.fuel || (building.imported ? building.energyType : "electric")
+        return {fuel, power}
     }
     addTarget(itemKey) {
         if (itemKey === undefined) {
